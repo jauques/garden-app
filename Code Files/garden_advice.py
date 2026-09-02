@@ -1,27 +1,29 @@
-# Hardcoded values for the season and plant type
-season = "summer"  # TODO: Replace with input() to allow user interaction.
-plant_type = "flower"  # TODO: Replace with input() to allow user interaction.
+# Function to generate advice based on the season
+def get_season_advice(season):
+    if season == "summer":
+        return "Water your plants regularly and provide some shade.\n"
+    elif season == "winter":
+        return "Protect your plants from frost with covers.\n"
+    else:
+        return "No advice for this season.\n"
 
-# Variable to hold gardening advice
-advice = ""
 
-# Determine advice based on the season
-if season == "summer":
-    advice += "Water your plants regularly and provide some shade.\n"
-elif season == "winter":
-    advice += "Protect your plants from frost with covers.\n"
-else:
-    advice += "No advice for this season.\n"
+# Function to generate advice based on plant type
+def get_plant_advice(plant_type):
+    if plant_type == "flower":
+        return "Use fertiliser to encourage blooms."
+    elif plant_type == "vegetable":
+        return "Keep an eye out for pests!"
+    else:
+        return "No advice for this type of plant."
 
-# Determine advice based on the plant type
-if plant_type == "flower":
-    advice += "Use fertiliser to encourage blooms."
-elif plant_type == "vegetable":
-    advice += "Keep an eye out for pests!"
-else:
-    advice += "No advice for this type of plant."
 
-# Print the generated advice
+season = "summer"
+plant_type = "flower"
+
+advice = get_season_advice(season)
+advice += get_plant_advice(plant_type)
+
 print(advice)
 
 # TODO: Examples of possible features to add:
